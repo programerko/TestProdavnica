@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Prodavnice</string>
+    <string name="app_name">Shops</string>
+    <string name="slika_prodavnice">slika prodavnice</string>
+    <string name="see_on_map">See on map</string>
 </resources>

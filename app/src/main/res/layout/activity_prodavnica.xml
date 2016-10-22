@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_prodavnica"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="nikolatokic.com.prodavnice.ProdavnicaActivity">
+
+    <ImageView
+        android:id="@+id/prodavnica_img"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="@dimen/activity_vertical_margin"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="@string/slika_prodavnice" />
+    <TextView
+        android:id="@+id/prodavnica_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/prodavnica_desc_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:layout_weight="2"/>
+    <TextView
+        android:id="@+id/prodavnica_location_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/prodavnica_workhours_tv"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/see_on_map"
+        android:onClick="openMap"/>
+
+</LinearLayout>
