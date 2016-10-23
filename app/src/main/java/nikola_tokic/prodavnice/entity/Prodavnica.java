@@ -1,12 +1,9 @@
-package nikolatokic.com.prodavnice.entity;
+package nikola_tokic.prodavnice.entity;
 
-import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 
 public class Prodavnica implements Parcelable{
@@ -30,35 +27,10 @@ public class Prodavnica implements Parcelable{
     private String promotion;
     private HashMap<String, String> workingHours;
 
-    public Prodavnica(int accountType, String address, String city, int countryId, String countryName,
-                      String description, int id, long latitude, long longitude, String name,
-                      String placeImgUrl, String promotion, int reviewNum, int score, int status,
-                      String webSite, boolean working, HashMap<String, String> workingHours) {
-        this.accountType = accountType;
-        this.address = address;
-        this.city = city;
-        this.countryId = countryId;
-        this.countryName = countryName;
-        this.description = description;
-        this.id = id;
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.name = name;
-        this.placeImgUrl = placeImgUrl;
-        this.promotion = promotion;
-        this.reviewNum = reviewNum;
-        this.score = score;
-        this.status = status;
-        this.webSite = webSite;
-        this.working = working;
-        this.workingHours = workingHours;
-    }
-
     public Prodavnica() {
-
     }
 
-    protected Prodavnica(Parcel in) {
+    private Prodavnica(Parcel in) {
         id = in.readInt();
         countryId = in.readInt();
         status = in.readInt();
@@ -269,6 +241,25 @@ public class Prodavnica implements Parcelable{
         dest.writeString(description);
         dest.writeString(webSite);
         dest.writeString(promotion);
+
+    }
+
+    public String getHoursStr(){
+
+        return "Mon - " +
+                workingHours.get("mon") +
+                "\nTue - " +
+                workingHours.get("tue") +
+                "\nTed - " +
+                workingHours.get("wed") +
+                "\nThu - " +
+                workingHours.get("thu") +
+                "\nFri - " +
+                workingHours.get("fri") +
+                "\nSat - " +
+                workingHours.get("sat") +
+                "\nSun - " +
+                workingHours.get("sun");
 
     }
 }

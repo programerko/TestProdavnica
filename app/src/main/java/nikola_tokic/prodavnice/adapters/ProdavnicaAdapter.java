@@ -1,11 +1,10 @@
-package nikolatokic.com.prodavnice.adapters;
+package nikola_tokic.prodavnice.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -18,10 +17,9 @@ import com.squareup.picasso.Picasso;
 import java.io.File;
 import java.util.List;
 
-import nikolatokic.com.prodavnice.MainActivity;
-import nikolatokic.com.prodavnice.ProdavnicaActivity;
-import nikolatokic.com.prodavnice.R;
-import nikolatokic.com.prodavnice.entity.Prodavnica;
+import nikola_tokic.prodavnice.ProdavnicaActivity;
+import nikola_tokic.prodavnice.entity.Prodavnica;
+import nikolatokic.nikola_tokic.prodavnice.R;
 
 /**
  * Created by Nikola on 22.10.2016!
@@ -52,8 +50,9 @@ public class ProdavnicaAdapter extends ArrayAdapter<Prodavnica> {
         }
     }
 
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         final ViewHolder viewHolder;
         final Prodavnica prodavnica = prodavnice.get(position);
 

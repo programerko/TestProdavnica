@@ -1,4 +1,4 @@
-package nikolatokic.com.prodavnice.database;
+package nikola_tokic.prodavnice.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -10,8 +10,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import nikolatokic.com.prodavnice.MainActivity;
-import nikolatokic.com.prodavnice.entity.Prodavnica;
+import nikola_tokic.prodavnice.entity.Prodavnica;
 
 /**
  * Created by Nikola on 22.10.2016!
